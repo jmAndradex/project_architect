@@ -1,6 +1,6 @@
 ---
 name: project-architect
-description: "Guide software projects from initial idea or existing repository through PRD, AGENTS.md, architecture, implementation, review, Git hygiene, task handoffs, and continuous methodology improvement. Use when creating or rescuing a project, writing or revising project instructions, planning or executing development tasks, deciding branch/PR/merge strategy, auditing execution efficiency, closing tasks with accountable next actions, or proposing reusable lessons from completed work. Applies to personal and organizational repositories without importing organization-specific rules."
+description: "Coordinate software systems and business intelligence projects from diagnosis and planning through implementation, review and task closure. Use for application or API changes, BI reports and semantic models, mixed API-to-report deliveries, Git reconciliation, methodology learning and skill synchronization. Supports natural-language requests and eight Portuguese action verbs. Apply local project instructions and permissions."
 ---
 
 # Project Architect
@@ -19,6 +19,37 @@ Act as an evidence-driven senior engineering partner. Optimize actual delivery t
 8. **Be honest about execution.** Separate proposed, committed, merged, deployed, and observed-in-production states. No fabricated tool use, tests, links, time estimates, permissions, background execution, or success claims. Work autonomously within existing authorization, not beyond it.
 
 ## Workflow router
+
+### Trilhas de desenvolvimento
+
+Escolha a trilha pelo resultado que a pessoa precisa usar. Use o contexto para inferi-la. Pergunte somente quando a resposta mudar a entrega.
+
+| Trilha | Entrega e aceite | Quem responde |
+| --- | --- | --- |
+| Sistemas | Para aplicações, APIs, serviços e automações, defina o comportamento esperado por quem usa a tela ou consome o contrato. Verifique a alteração pelo fluxo de uso e cubra a falha que ameaça o aceite. | Codex GUI/VS implementa. Web revisa a evidência. O dono do processo valida uma regra de negócio quando necessário. |
+| BI | Para indicadores, modelos e relatórios, defina a decisão apoiada e o recorte. Para mudança de cálculo, compare um valor de referência no mesmo período, granularidade, filtros e atualização. Para mudança exclusivamente visual, valide leitura e interação. Em modernização ou substituição, consulte o [guia de BI](references/bi-modernization.md) antes de escolher o artefato. | Codex GUI/VS trabalha no modelo ou relatório conforme o acesso. Web coordena o aceite. A área confirma a definição do indicador, e o mantenedor verifica o fluxo de edição quando fizer parte da entrega. |
+| Entrega mista | Se um sistema fornece dados a um BI e ambos mudam, descreva uma tarefa por responsabilidade dentro da mesma entrega. Acorde a chave, o período e a regra compartilhada. Acompanhe um registro ou agregado da origem até o indicador. | Um executor por alteração. Web responde pela revisão do resultado de ponta a ponta. |
+
+Aplique o contrato de tarefa e de fechamento uma vez por entrega coesa. Reaproveite evidências válidas em ambas as trilhas. Use os procedimentos Git quando o projeto versiona o artefato. Para BI mantido em arquivo ou serviço, identifique a cópia editável e o destino de publicação conforme a tarefa.
+
+Ao propor aprendizado, indique onde se aplica: Sistemas, BI, ambas ou somente o projeto. Promova uma prática ao núcleo comum quando puder indicar a decisão que ela melhora e um critério de aceite útil em cada trilha. Registre-a uma vez no núcleo e mantenha os detalhes técnicos na trilha de origem. Siga o processo de aprovação em [learning-loop.md](references/learning-loop.md).
+
+### Comandos de trabalho
+
+No ChatGPT Web, use **“Project Architect, [verbo] [alvo]”**. No Codex GUI/VS, use **`$project-architect [verbo] [alvo]`**. A trilha é opcional. Aceite pedidos equivalentes em linguagem natural e escolha somente os verbos que a tarefa requer.
+
+| Verbo | O que entrega | Quando usar | Exemplo de pedido |
+| --- | --- | --- | --- |
+| `diagnosticar` | Estado atual, evidência, causa confirmada ou hipótese e próxima verificação útil. | Quando há falha, divergência ou dúvida sobre o ponto de partida. | “Diagnosticar por que o total mensal do painel diverge do relatório de origem na mesma filial.” |
+| `planejar` | Tarefa com ganho esperado, mecanismo, critério de aceite e responsável. | Quando o objetivo está claro e é preciso definir o menor incremento que pode ser aceito. | “Planejar a troca da fonte da API do painel de pessoas, com aceite para o endpoint e para o indicador.” |
+| `executar` | No Web, pedido técnico pronto para o executor. No Codex, alteração autorizada, evidência do resultado e pendências. | Quando a tarefa já tem escopo e aceite suficientes para agir. | No Codex: “Executar a correção aprovada da data de admissão e conferir o campo na resposta da API.” |
+| `revisar` | Parecer sobre o aceite, com evidência e correção necessária, se houver. | Quando existe um diff, uma entrega visual, uma reconciliação de números ou uma PR para avaliar. | “Revisar se o novo filtro altera a matriz e o cartão de total conforme a regra aprovada.” |
+| `reconciliar-git` | Destino justificado de cada referência, com conteúdo exclusivo e dependências identificados. | Quando há sobreposição de branches, PRs ou worktrees e é preciso decidir o que integrar, preservar ou encerrar. | “Reconciliar-git a branch do cronômetro com a main e identificar os testes que ainda só existem nela.” |
+| `fechar` | Resultado real, verificação, pendências, próxima ação e responsável. | No fim de uma tarefa ou quando um bloqueio transfere a responsabilidade. | “Fechar a homologação do painel com o aceite da área e registrar quem responde pela publicação.” |
+| `aprender` | Proposta de regra com origem, ganho esperado, alcance e decisão de aprovação pendente ou já registrada. | Quando uma entrega revela retrabalho recorrente ou uma prática reutilizável. | “Aprender com a reabertura do BI porque o mantenedor precisava editar o Power Query.” |
+| `sincronizar` | Comparação de versões e conteúdo da própria Skill por ambiente, com atualização e confirmação de leitura onde autorizadas. | Quando a cópia do ChatGPT, do GitHub, do Windows ou do WSL pode divergir. | “Sincronizar a Project Architect entre GitHub e WSL. Primeiro compare as versões e me mostre a diferença.” |
+
+O Web coordena e revisa. O Codex GUI/VS executa no ambiente que possui o artefato. No handoff, transmita alvo, escopo autorizado, aceite e referência da evidência já existente. Se a sessão técnica for separada, entregue o pedido pronto e só registre execução ao receber o retorno. O verbo informa a intenção. Para publicar, integrar, excluir ou alterar a metodologia canônica, confira a autorização aplicável e o estado atual. Aproveite a autorização já concedida para o mesmo escopo.
 
 ### A. New project or feature
 

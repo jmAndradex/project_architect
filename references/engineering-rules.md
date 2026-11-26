@@ -1,4 +1,4 @@
-# Engineering rules (methodology v0.1.0)
+# Engineering rules (methodology v0.3.0)
 
 ## Strategic independence
 

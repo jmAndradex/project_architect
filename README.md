@@ -1,8 +1,8 @@
 # Project Architect
 
-Skill reutilizavel para conduzir projetos de software do PRD a entrega, incluindo auditoria de repositorios existentes, governanca Git, proposta e encerramento de tarefas, e aprendizado metodologico aprovado pelo usuario.
+Metodologia para conduzir projetos de Sistemas e BI. O ChatGPT Web coordena o trabalho e revisa evidências. O Codex GUI/VS Code executa as tarefas técnicas no ambiente do projeto.
 
-**Versao:** 0.1.0 | **Entrypoint:** [SKILL.md](SKILL.md)
+**Versão:** 0.3.0 | **Instruções:** [SKILL.md](SKILL.md)
 
 ## Principios
 
@@ -53,27 +53,9 @@ Alternativamente, copie a pasta completa da Skill (com `SKILL.md`, `references/`
 
 ## Como invocar
 
-A Skill pode ser descoberta pela descricao de suas tarefas ou invocada explicitamente pelo nome `project-architect`.
+No Web: “Project Architect, planejar a troca da fonte do painel de pessoas.” No Codex: `$project-architect executar a tarefa aprovada de troca da fonte`.
 
-**Novo projeto**
-
-> Use a Project Architect para transformar esta ideia em escopo minimo, PRD, AGENTS.md e primeira task. Antes de cada task, declare ganho, mecanismo, aceite e responsavel.
-
-**Projeto existente**
-
-> Use a Project Architect para auditar este repositorio. Leia AGENTS.md, main, branches, PRs, CI e estado real. Proponha somente ajustes com ganho concreto, sem alterar nada ate delimitar o escopo.
-
-**Desenvolvimento**
-
-> Aplique a Project Architect nesta entrega. Reaproveite branch/PR apropriada, valide so os riscos necessarios e feche a task com entregue, evidencias, proxima acao e responsavel.
-
-**Limpeza Git**
-
-> Use a Project Architect para identificar branches obsoletas com provas de integracao. Preserve commits unicos e nao exclua nada sem autorizacao.
-
-**Aprendizado**
-
-> Analise as friccoes deste ciclo e proponha ate tres novas regras que aumentem velocidade, com evidencias e limites. Nao edite a metodologia sem minha aprovacao.
+Consulte o [guia dos oito verbos, com finalidade e exemplos](SKILL.md#comandos-de-trabalho) e os [critérios de aceite para Sistemas, BI e entregas mistas](SKILL.md#trilhas-de-desenvolvimento). Os pedidos também podem ser escritos livremente.
 
 ## Conteudo
 
@@ -82,6 +64,7 @@ A Skill pode ser descoberta pela descricao de suas tarefas ou invocada explicita
 - [references/task-contract.md](references/task-contract.md): proposta e encerramento de tarefas.
 - [references/existing-projects.md](references/existing-projects.md): auditoria e adequacao incremental.
 - [references/learning-loop.md](references/learning-loop.md): propostas de aprendizado e versionamento.
+- [references/bi-modernization.md](references/bi-modernization.md): piloto, conciliação de indicadores e manutenção do BI entregue.
 - [references/artifacts.md](references/artifacts.md): criterios para PRD, SPEC, README e AGENTS.md.
 - [assets/AGENTS.template.md](assets/AGENTS.template.md) e [assets/PRD.template.md](assets/PRD.template.md): modelos opcionais.
 
